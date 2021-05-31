@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.11/vue.cjs.js"
+        integrity="sha512-rEUmaOwq8RTKLJ+i+F05YDchx4/UJ+yuM83C2RHPV8LqU6xhc03MYUE+6QQM3GGtKNCZCgHmoYKCSSgGSg92ew=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
+        referrerpolicy="no-referrer" />
+    <title>Dipendente</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <ul>
+                <li class="tab is-active" onclick="openTab(event,'Campagne')"><a>Campagne</a></li>
+                <li class="tab" onclick="openTab(event,'Mondi')"><a>Mondi</a></li>
+                <li class="tab" onclick="openTab(event,'Eventi')"><a>Eventi</a></li>
+                <li class="tab" onclick="openTab(event,'Npc')"><a>Npc</a></li>
+                <li class="tab" onclick="openTab(event,'Missioni')"><a>Missioni</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container section">
+        <div id="Campagne" class="content-tab">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="Pelagius">Pelagius</option>
+                                        <option value="Gerald of Rivia">Gerald of Rivia</option>
+                                        <option value="Clank">Clank</option>
+                                        <option value="The Master">The Master</option>
+                                        <option value="Predator">Predator</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columns m-2 has-text-centered">
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/add.png">
+                                        add
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/edit.png">
+                                        edit
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/delete.png">
+                                        delete
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="tabs is-boxed pt-1">
+                                    <ul>
+                                        <li class="tab is-active"><a>Panoramica</a></li>
+                                        <li class="tab"><a>Abilità</a></li>
+                                        <li class="tab"><a>Oggetti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Name: </strong>Pelagius
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="text" placeholder="Text input">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <strong>Tipo: </strong>Mago
+                                        <div class="control" style="display: none;">
+                                            <input class="input is-success" type="text" placeholder="Text input"
+                                                value="bulma">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <strong>Exp: </strong>9840
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="email" placeholder="Email input" value="hello@">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="field">
+                                    <div class="has-text-centered">
+                                        <strong>Storia personaggio</strong>
+                                        <p>Descrizione pg...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                                            at eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 1...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 2...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 3...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                    </div>
+                                    <div class="control" style="display: none;">
+                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field is-grouped" style="display: none;">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Mondi" class="content-tab" style="display:none">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="Pelagius">Pelagius</option>
+                                        <option value="Gerald of Rivia">Gerald of Rivia</option>
+                                        <option value="Clank">Clank</option>
+                                        <option value="The Master">The Master</option>
+                                        <option value="Predator">Predator</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columns m-2 has-text-centered">
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/add.png">
+                                        add
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/edit.png">
+                                        edit
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/delete.png">
+                                        delete
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="tabs is-boxed pt-1">
+                                    <ul>
+                                        <li class="tab is-active"><a>Panoramica</a></li>
+                                        <li class="tab"><a>Abilità</a></li>
+                                        <li class="tab"><a>Oggetti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Name: </strong>Pelagius
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="text" placeholder="Text input">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <strong>Tipo: </strong>Mago
+                                        <div class="control" style="display: none;">
+                                            <input class="input is-success" type="text" placeholder="Text input"
+                                                value="bulma">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <strong>Exp: </strong>9840
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="email" placeholder="Email input" value="hello@">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="field">
+                                    <div class="has-text-centered">
+                                        <strong>Storia personaggio</strong>
+                                        <p>Descrizione pg...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                                            at eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 1...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 2...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 3...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                    </div>
+                                    <div class="control" style="display: none;">
+                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field is-grouped" style="display: none;">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Eventi" class="content-tab" style="display:none">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="Pelagius">Pelagius</option>
+                                        <option value="Gerald of Rivia">Gerald of Rivia</option>
+                                        <option value="Clank">Clank</option>
+                                        <option value="The Master">The Master</option>
+                                        <option value="Predator">Predator</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columns m-2 has-text-centered">
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/add.png">
+                                        add
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/edit.png">
+                                        edit
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/delete.png">
+                                        delete
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="tabs is-boxed pt-1">
+                                    <ul>
+                                        <li class="tab is-active"><a>Panoramica</a></li>
+                                        <li class="tab"><a>Abilità</a></li>
+                                        <li class="tab"><a>Oggetti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Name: </strong>Pelagius
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="text" placeholder="Text input">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <strong>Tipo: </strong>Mago
+                                        <div class="control" style="display: none;">
+                                            <input class="input is-success" type="text" placeholder="Text input"
+                                                value="bulma">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <strong>Exp: </strong>9840
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="email" placeholder="Email input" value="hello@">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="field">
+                                    <div class="has-text-centered">
+                                        <strong>Storia personaggio</strong>
+                                        <p>Descrizione pg...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                                            at eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 1...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 2...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 3...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                    </div>
+                                    <div class="control" style="display: none;">
+                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field is-grouped" style="display: none;">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Npc" class="content-tab" style="display:none">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="Pelagius">Pelagius</option>
+                                        <option value="Gerald of Rivia">Gerald of Rivia</option>
+                                        <option value="Clank">Clank</option>
+                                        <option value="The Master">The Master</option>
+                                        <option value="Predator">Predator</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columns m-2 has-text-centered">
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/add.png">
+                                        add
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/edit.png">
+                                        edit
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/delete.png">
+                                        delete
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="tabs is-boxed pt-1">
+                                    <ul>
+                                        <li class="tab is-active"><a>Panoramica</a></li>
+                                        <li class="tab"><a>Abilità</a></li>
+                                        <li class="tab"><a>Oggetti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Name: </strong>Pelagius
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="text" placeholder="Text input">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <strong>Tipo: </strong>Mago
+                                        <div class="control" style="display: none;">
+                                            <input class="input is-success" type="text" placeholder="Text input"
+                                                value="bulma">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <strong>Exp: </strong>9840
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="email" placeholder="Email input" value="hello@">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="field">
+                                    <div class="has-text-centered">
+                                        <strong>Storia personaggio</strong>
+                                        <p>Descrizione pg...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                                            at eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 1...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 2...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 3...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                    </div>
+                                    <div class="control" style="display: none;">
+                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field is-grouped" style="display: none;">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Missioni" class="content-tab" style="display:none">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select>
+                                        <option value="Pelagius">Pelagius</option>
+                                        <option value="Gerald of Rivia">Gerald of Rivia</option>
+                                        <option value="Clank">Clank</option>
+                                        <option value="The Master">The Master</option>
+                                        <option value="Predator">Predator</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="columns m-2 has-text-centered">
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/add.png">
+                                        add
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/edit.png">
+                                        edit
+                                    </figure>
+                                </div>
+                                <div class="column">
+                                    <figure class="image is-32x32">
+                                        <img src="img/delete.png">
+                                        delete
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card ">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="tabs is-boxed pt-1">
+                                    <ul>
+                                        <li class="tab is-active"><a>Panoramica</a></li>
+                                        <li class="tab"><a>Abilità</a></li>
+                                        <li class="tab"><a>Oggetti</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="columns">
+                                    <div class="column">
+                                        <strong>Name: </strong>Pelagius
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="text" placeholder="Text input">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <strong>Tipo: </strong>Mago
+                                        <div class="control" style="display: none;">
+                                            <input class="input is-success" type="text" placeholder="Text input"
+                                                value="bulma">
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <strong>Exp: </strong>9840
+                                        <div class="control" style="display: none;">
+                                            <input class="input" type="email" placeholder="Email input" value="hello@">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="field">
+                                    <div class="has-text-centered">
+                                        <strong>Storia personaggio</strong>
+                                        <p>Descrizione pg...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum
+                                            at eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 1...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 2...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                        <p>Avventura 3...Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at
+                                            eros. Donec id elit non mi
+                                            porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis
+                                            parturient
+                                            montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet
+                                            fermentum.</p>
+                                    </div>
+                                    <div class="control" style="display: none;">
+                                        <textarea class="textarea" placeholder="Textarea"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="field is-grouped" style="display: none;">
+                                    <div class="control">
+                                        <button class="button is-link">Submit</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-link is-light">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/tabs.js"></script>
+
+</html>
